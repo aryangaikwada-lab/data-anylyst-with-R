@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA Reviews | Analysis Dashboard</title><style>
+body{margin:0;background:#f4f6fb;color:#182230;font:16px/1.55 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:32px 22px 54px}.hero{background:#172554;color:white;padding:30px 34px;border-radius:18px}
+.eyebrow{color:#bfdbfe;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700}.hero h1{margin:5px 0;font-size:34px}.hero p{margin:8px 0 0;color:#dbeafe}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:20px 0}.card,.panel,.chart{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:18px;box-shadow:0 3px 12px #0f172a0a}
+.card strong{display:block;font-size:27px;color:#1d4ed8}.card span{color:#526174;font-size:13px}.panel{margin:18px 0}.panel h2,.section-title{margin:0 0 10px;color:#172554}
+.insights{padding-left:20px;margin-bottom:0}.insights li{margin:7px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.chart{padding:18px}.chart h3{margin:0;color:#1e3a8a}.chart p{margin:4px 0 12px;color:#526174;font-size:14px}.chart img{display:block;width:100%;height:auto;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin:10px 0 2px;font-size:14px}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #e2e8f0}th{background:#eff6ff;color:#1e3a8a}tr:last-child td{border-bottom:0}
+.note{color:#526174;font-size:14px}.files a{color:#1d4ed8;margin-right:14px}.footer{color:#64748b;font-size:13px;margin-top:22px}@media(max-width:600px){.wrap{padding:16px 12px}.hero{padding:22px}.hero h1{font-size:27px}}
+</style></head><body><main class="wrap">
+<header class="hero"><div class="eyebrow">Data analysis mini project</div><h1>GTA Review Dashboard</h1>
+<p>45064 unique reviews · 19 Nov 2026 to 23 Nov 2026 · scores from 0 to 10</p></header>
+<section class="cards">
+<div class="card"><strong>4.99</strong><span>Average score out of 10</span></div>
+<div class="card"><strong>43.7%</strong><span>High scores (7–10)</span></div>
+<div class="card"><strong>51.0%</strong><span>Low scores (0–4)</span></div>
+<div class="card"><strong>45,064</strong><span>Unique reviews analyzed</span></div>
+</section>
+<section class="panel"><h2>What stands out</h2><ul class="insights">
+<li>The most common score is <b>10/10</b> (15,833 reviews; 35.1%).</li>
+<li>43.7% of reviews score 7–10, while 51.0% score 0–4.</li>
+<li>Xbox Series X has the higher platform average at 5.21/10; platform averages are 0.23 points apart.</li>
+<li>2026-11-21 has the most reviews (24,608). The largest platform supplies 91.2% of all analyzed reviews.</li>
+</ul></section>
+<section class="panel"><h2>Platform comparison</h2><p class="note">Scores summarize the reviews in this file. Platform review counts are uneven, so these figures do not establish why ratings differ.</p>
+<table><thead><tr><th>Platform</th><th>Reviews</th><th>Average score</th><th>Median score</th><th>Scores 7-10</th></tr></thead><tbody><tr><td>PlayStation 5</td><td>41,116</td><td>4.97 / 10</td><td>4 / 10</td><td>43.5%</td></tr><tr><td>Xbox Series X</td><td> 3,948</td><td>5.21 / 10</td><td>5 / 10</td><td>45.2%</td></tr></tbody></table>
+</section>
+<div class="grid">
+<article class="chart"><h3>Score distribution</h3><p>Number of reviews at each score from 0 to 10.</p><img src="score_distribution.png" alt="Bar chart of review counts for each score"></article>
+<article class="chart"><h3>Average score by platform</h3><p>Mean score for each platform; the scale runs from 0 to 10.</p><img src="scores_by_platform.png" alt="Average review score by platform"></article>
+<article class="chart"><h3>Rating mix by platform</h3><p>Each bar totals 100%, so compare the shares of low, mixed, and high scores.</p><img src="rating_bands_by_platform.png" alt="100 percent stacked rating bands by platform"></article>
+<article class="chart"><h3>Review volume by platform</h3><p>The platform sample sizes differ, so score comparisons are descriptive.</p><img src="review_count_by_platform.png" alt="Number of reviews by platform"></article>
+<article class="chart"><h3>Reviews by day</h3><p>Shows when reviews were published in the dataset.</p><img src="daily_review_volume.png" alt="Review counts by publication day"></article>
+<article class="chart"><h3>Average score by day</h3><p>Daily averages can move more when a day has fewer reviews.</p><img src="average_daily_score.png" alt="Daily average review score"></article>
+<article class="chart"><h3>Score spread by platform</h3><p>The box shows the middle half of scores; the line marks the median.</p><img src="score_spread_by_platform.png" alt="Boxplots of review scores by platform"></article>
+<article class="chart"><h3>Most frequent content words</h3><p>Common English and Spanish filler words were filtered. Counts are word occurrences, not review counts or sentiment.</p><img src="top_review_terms.png" alt="Top 15 content word counts"></article>
+<article class="chart"><h3>Review length</h3><p>Each review is measured by its number of characters.</p><img src="review_length_distribution.png" alt="Histogram of review text length"></article>
+</div>
+<section class="panel"><h2>Score groups</h2><p class="note">For this project, low = 0–4, mixed = 5–6, and high = 7–10. These are simple reporting bands.</p>
+<table><thead><tr><th>Score group</th><th>Reviews</th><th>Share of reviews</th></tr></thead><tbody><tr><td>Low (0-4)</td><td>22,967</td><td>51.0%</td></tr><tr><td>Mixed (5-6)</td><td> 2,407</td><td>5.3%</td></tr><tr><td>High (7-10)</td><td>19,690</td><td>43.7%</td></tr></tbody></table>
+</section>
+<section class="panel"><h2>Most common content words</h2><p class="note">The percentage is each word’s share of all remaining token occurrences after common filler words were filtered. This is a frequency count, not sentiment analysis.</p>
+<table><thead><tr><th>Content word</th><th>Occurrences</th><th>Share of content words</th></tr></thead><tbody><tr><td>story</td><td>14,139</td><td>0.827%</td></tr><tr><td>world</td><td> 9,662</td><td>0.565%</td></tr><tr><td>fps</td><td> 9,437</td><td>0.552%</td></tr><tr><td>even</td><td> 8,727</td><td>0.510%</td></tr><tr><td>games</td><td> 8,365</td><td>0.489%</td></tr><tr><td>good</td><td> 7,390</td><td>0.432%</td></tr><tr><td>people</td><td> 7,286</td><td>0.426%</td></tr><tr><td>graphics</td><td> 7,173</td><td>0.419%</td></tr><tr><td>feels</td><td> 7,165</td><td>0.419%</td></tr><tr><td>don</td><td> 6,787</td><td>0.397%</td></tr><tr><td>juego</td><td> 6,710</td><td>0.392%</td></tr><tr><td>time</td><td> 6,357</td><td>0.372%</td></tr><tr><td>play</td><td> 6,310</td><td>0.369%</td></tr><tr><td>years</td><td> 6,285</td><td>0.367%</td></tr><tr><td>characters</td><td> 6,205</td><td>0.363%</td></tr></tbody></table>
+</section>
+<section class="panel"><h2>Data and cleaning</h2><p class="note">The source had 46,105 rows. 1,041 repeated review-ID rows were removed, keeping the first record for each ID. 0 rows with invalid score or date were excluded. Review length is measured in characters.</p>
+<p class="files"><b>CSV tables:</b> <a href="kpis.csv">KPIs</a><a href="platform_summary.csv">Platform summary</a><a href="score_distribution.csv">Scores</a><a href="daily_summary.csv">Daily summary</a><a href="rating_bands.csv">Score groups</a><a href="top_terms.csv">Content words</a></p></section>
+<footer class="footer">Generated by the base R script in this project. No additional R packages required.</footer>
+</main></body></html>
